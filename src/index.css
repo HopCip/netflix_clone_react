@@ -1,13 +1,119 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #141414;
+  color: #e5e5e5;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.movies_box {
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.movies_box input {
+  margin-bottom: 20px;
+  outline: none;
+  font-size: 1.5rem;
+  background: lightgray;
+  max-width: 270px;
+}
+
+.all_movies {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.one_movie {
+  display: flex;
+  flex-direction: column;
+  max-width: 250px;
+  box-shadow: 0px 0px 10px #e50914;
+  margin: 10px;
+  padding: 10px;
+  transition: all 0.5s linear;
+}
+
+.one_movie h2 {
+  font-size: 1.4rem;
+}
+
+.one_movie:hover {
+  transform: scale(1.04);
+}
+
+.one_movie img {
+  width: 100%;
+  height: 150px;
+}
+
+.one_movie p {
+  text-align: justify;
+  padding: 0.35rem 0;
+}
+
+.read_more_btn {
+  display: inline;
+  background: transparent;
+  border-color: transparent;
+  border: none;
+  color: #e50914;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.read_more_btn:hover {
+  color: #c0030d;
+}
+
+.delete_movie_btn {
+  color: white;
+  background-color: #e50914;
+  padding: 5px;
+  cursor: pointer;
+  transition: all 0.3s linear;
+}
+
+.delete_movie_btn:hover {
+  background-color: #c0030d;
+}
+
+.reset_movies_btn {
+  color: white;
+  background-color: #e50914;
+  font-size: 1.25rem;
+  padding: 10px 15px;
+  margin: 10px 0 20px 0;
+  cursor: pointer;
+  transition: all 0.5s linear;
+}
+
+.reset_movies_btn:hover {
+  transform: scale(1.04);
+  background-color: #c0030d;
+}
+
+@media (max-width:600px) {
+
+  .all_movies {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .one_movie {
+    margin: 0 auto;
+    max-width: 85%;
+    box-shadow: 0px 0px 10px #e50914;
+    padding: 10px;
+    margin-bottom: 15px;
+    transition: none;
+  }
+
+  .one_movie img {
+    height: 100%;
+  }
 }
